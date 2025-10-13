@@ -14,6 +14,7 @@ import * as AllIcons from '@ant-design/icons-angular/icons';
 import { SideBarComponent } from '../shared/components/side-bar.component/side-bar.component';
 import { LugaresTablaComponent } from './lugares-tabla.component/lugares-tabla.component';
 import { PlaceDetailComponent } from './place-detail.component/place-detail.component';
+import { TrailService } from '../core/services/trail.service';
 const icons = Object.values(AllIcons);
 
 @NgModule({
@@ -33,7 +34,8 @@ const icons = Object.values(AllIcons);
     NzTagModule
   ],
   providers: [
-    PlaceService
+    PlaceService,
+    TrailService
   ],
   exports: [
     PlaceComponent,
