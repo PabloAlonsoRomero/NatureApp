@@ -17,6 +17,12 @@
       <td>{{ place.category }}</td>
       <td>{{ place.accessible ? "Si" : "No"}}</td>
       <td>{{ place.entryFee | currency}}</td>
+      <td>
+        <button [routerLink]="['/admin/place', place.id]" nz-button nzType="primary" nzSize="small">
+          <nz-icon nzType="eye" nzTheme="outline" />
+          Ver Detalle
+        </button>
+      </td>
     </tr>
   </tbody>
 </nz-table>

@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-place-detail.component',
-  imports: [],
   templateUrl: './place-detail.component.html',
-  styleUrl: './place-detail.component.css'
+  styleUrl: './place-detail.component.css',
+  standalone: false
 })
 export class PlaceDetailComponent {
 
