@@ -15,6 +15,7 @@ import { SideBarComponent } from '../shared/components/side-bar.component/side-b
 import { LugaresTablaComponent } from './lugares-tabla.component/lugares-tabla.component';
 import { PlaceDetailComponent } from './place-detail.component/place-detail.component';
 import { TrailService } from '../core/services/trail.service';
+import { TrailsListComponent } from './trails-list.component/trails-list.component';
 const icons = Object.values(AllIcons);
 
 @NgModule({
@@ -22,6 +23,7 @@ const icons = Object.values(AllIcons);
     PlaceComponent,
     LugaresTablaComponent,
     PlaceDetailComponent,
+    TrailsListComponent,
     AdminLayout
   ],
   imports: [
@@ -41,6 +43,7 @@ const icons = Object.values(AllIcons);
     PlaceComponent,
     LugaresTablaComponent,
     PlaceDetailComponent,
+    TrailsListComponent,
     AdminLayout
   ]
 })
