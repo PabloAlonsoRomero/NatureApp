@@ -5,14 +5,17 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzTagModule } from 'ng-zorro-antd/tag';
+import { AdminLayout } from './admin-layout/admin-layout';
+import { RouterModule } from '@angular/router';
+import { ADMIN_ROUTES } from './pages.routes';
 
 @NgModule({
   declarations: [
-
+    AdminLayout
   ],
   imports: [
     CommonModule,
-
+    RouterModule.forChild(ADMIN_ROUTES),
     NzTableModule,
     NzIconModule,
     NzButtonModule,
@@ -23,7 +26,7 @@ import { NzTagModule } from 'ng-zorro-antd/tag';
 
   ],
   exports: [
-
+    AdminLayout
   ]
 })
 export class PagesModule {}
