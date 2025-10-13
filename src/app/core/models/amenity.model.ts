@@ -3,4 +3,4 @@ export interface Amenity {
   Name : string;
 }
 
-// Corresponde al modelo de AmenityDto que se usa en la base de datos
+// Corresponde al modelo de AmenityDto del backend
