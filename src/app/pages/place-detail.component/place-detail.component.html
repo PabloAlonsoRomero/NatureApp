@@ -1,1 +1,58 @@
-<p>place-detail.component works!</p>
+<div class="place-detail-card" *ngIf="place">
+  <h2>{{ place.name }}</h2>
+  <span class="category-tag">{{ place.category }}</span>
+  <p>{{ place.description }}</p>
+
+  <div class="info-g">
+    <div><strong>Latitud:</strong> {{ place.latitude }}</div>
+    <div><strong>Longitud</strong> {{ place.longitude }}</div>
+    <div><strong>Altitud:</strong> {{ place.elevationMeters }}</div>
+    <div><strong>Accesible:</strong> {{ place.accessible ? 'Si' : 'No' }}</div>
+    <div><strong>Cuota de entrada:</strong> {{ place.entryFee | currency:'MXN'}}</div>
+    <div><strong>Horario:</strong> {{ place.openingHours }}</div>
+  </div>
+
+  <!-- Mini mapa centrado en el lugar -->
+  <div id="mini-map" class="mini-map"></div>
+
+  <!-- Galería de fotos -->
+  <div class="gallery" *ngIf="place.photos?.length">
+    <h3>Galería</h3>
+    <div class="gallery-photos">
+      <img *ngFor="let photo of place.photos" [src]="photo.url" [alt]="place.name">
+    </div>
+  </div>
+
+  <!-- Amenities como tags -->
+  <div *ngIf="place.amenities?.length">
+    <h3>Servicios</h3>
+    <div class="amenities-tags">
+      <span class="amenity-tag" *ngFor="let amenity of place.amenities">{{ amenity.name }}</span>
+    </div>
+  </div>
+
+  <!-- Senderos en tabla -->
+  <div *ngIf="place.trails?.length">
+    <h3>Senderos</h3>
+    <table class="trails-table">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Distancia (km)</th>
+          <th>Dificultad</th>
+          <th>Tiempo (min)</th>
+          <th>Tipo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let trail of place.trails">
+          <td>{{ trail.name }}</td>
+          <td>{{ trail.distanceKm }}</td>
+          <td>{{ trail.difficulty }}</td>
+          <td>{{ trail.estimatedTimeMinutes }}</td>
+          <td>{{ trail.isLoop ? "Circuito" : "Lineal" }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

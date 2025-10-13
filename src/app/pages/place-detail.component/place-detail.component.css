@@ -1,0 +1,82 @@
+.place-detail-card {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.category-tag {
+  display: inline-block;
+  background: #e0f7fa;
+  color: #00796b;
+  padding: 0.2en 0.8em;
+  border-radius: 16px;
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5em 2em;
+  margin-bottom: 1.5em;
+}
+
+.mini-map {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  margin-bottom: 1.5em;
+  background: #eee;
+}
+
+.gallery {
+  margin-bottom: 1.5em;
+}
+
+.gallery-photos {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+.gallery-photos img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.amenities-tags {
+  display: flex;
+  gap: 0.5em;
+  flex-wrap: wrap;
+  margin-bottom: 1.5em;
+}
+
+.amenity-tag {
+  background: #ffe082;
+  color: #795548;
+  padding: 0.3em 1em;
+  border-radius: 16px;
+  font-size: 0.95em;
+}
+
+.trails-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1em;
+}
+
+.trails-table th, .trails-table td {
+  border: 1px solid #ddd;
+  padding: 0.5em;
+  text-align: center;
+}
+
+.trails-table th {
+  background: #f5f5f5;
+}
