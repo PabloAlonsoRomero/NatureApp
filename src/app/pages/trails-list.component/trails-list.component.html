@@ -1,1 +1,32 @@
-<p>trails-list.component works!</p>
+<nz-table [nzData]="trails">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>PlaceId</th>
+      <th>Nombre</th>
+      <th>Distancia (km)</th>
+      <th>Tiempo estimado (min)</th>
+      <th>Dificultad</th>
+      <th>Camino</th>
+      <th>Tipo</th>
+    </tr>
+  </thead>
+  <tbody> <!-- LOS PIPES TRANSFORMAN LA INFORMACION!!! -->
+    <tr *ngFor="let trail of trails">
+      <td>{{ trail.id }}</td>
+      <td>{{ trail.placeId }}</td>
+      <td>{{ trail.name }}</td>
+      <td>{{ trail.distanceKm }}</td>
+      <td>{{ trail.estimatedTimeMinutes }}</td>
+      <td>{{ trail.difficulty }}</td>
+      <td>{{ trail.path }}</td>
+      <td>{{ trail.isLoop ? "Circuito" : "Lineal" }}</td>
+      <td>
+        <button [routerLink]="['/admin/place', trail.placeId]" nz-button nzType="primary" nzSize="small">
+          <nz-icon nzType="eye" nzTheme="outline" />
+          Ver Lugar
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</nz-table>

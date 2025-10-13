@@ -1,4 +1,9 @@
 .map {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  height: 100%; /* ajusta la altura según lo que necesites */
+  margin: 0 auto;
+  box-sizing: border-box;
+  border-radius: 8px;
+  overflow: hidden;
 }

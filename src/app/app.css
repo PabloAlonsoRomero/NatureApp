@@ -9,3 +9,25 @@ app-map {
   height: 100vh;
   width: 100vw;
 }
+
+/* Puedes poner esto en styles.css o en el layout correspondiente */
+.main-layout {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.side-bar {
+  flex: 0 0 300px; /* ancho fijo para la sidebar */
+}
+
+.main-content {
+  flex: 1 1 auto;
+  padding: 2em;
+  overflow-x: auto;
+  min-width: 0;
+  background: #f7f7f7;
+  height: 100vh;
+  box-sizing: border-box;
+}

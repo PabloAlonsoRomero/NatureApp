@@ -1,0 +1,34 @@
+.trails-table {
+  width: 100%;
+  max-width: 100%;
+  table-layout: fixed;
+  margin-top: 1em;
+  font-size: 0.95em;
+}
+
+.trails-table th, .trails-table td {
+  word-break: break-word;
+  padding: 0.3em 0.4em;
+  text-align: center;
+}
+
+.trails-table th:nth-child(1),
+.trails-table td:nth-child(1) {
+  width: 22%;
+}
+.trails-table th:nth-child(2),
+.trails-table td:nth-child(2) {
+  width: 14%;
+}
+.trails-table th:nth-child(3),
+.trails-table td:nth-child(3) {
+  width: 18%;
+}
+.trails-table th:nth-child(4),
+.trails-table td:nth-child(4) {
+  width: 18%;
+}
+.trails-table th:nth-child(5),
+.trails-table td:nth-child(5) {
+  width: 18%;
+}
