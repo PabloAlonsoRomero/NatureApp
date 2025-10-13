@@ -5,5 +5,4 @@ export interface Review {
   Rating : number;
   Comment : string;
   Date : string;
-  
 }
