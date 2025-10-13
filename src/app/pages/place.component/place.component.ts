@@ -25,8 +25,8 @@ export class PlaceComponent implements OnInit{
       accessToken : environment.MAPBOX_TOKEN,
       style : this.style,
       container : "map",
-      center : [-98.657, 19.22],
-      zoom : 15
+      center : [-99.1403881, 19.430709],
+      zoom : 10
     });
 
     this.placeService.getAllPlaces().subscribe((placeResponse) => {

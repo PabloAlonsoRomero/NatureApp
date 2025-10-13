@@ -10,6 +10,9 @@ import { RouterModule } from '@angular/router';
 import { ADMIN_ROUTES } from './pages.routes';
 import { PlaceComponent } from './place.component/place.component';
 import { PlaceService } from '../core/services/place.service';
+import * as AllIcons from '@ant-design/icons-angular/icons';
+import { SideBarComponent } from '../shared/components/side-bar.component/side-bar.component';
+const icons = Object.values(AllIcons);
 
 @NgModule({
   declarations: [
@@ -20,7 +23,7 @@ import { PlaceService } from '../core/services/place.service';
     CommonModule,
     RouterModule.forChild(ADMIN_ROUTES),
     NzTableModule,
-    NzIconModule,
+    NzIconModule.forRoot(icons),
     NzButtonModule,
     NzCardModule,
     NzTagModule
