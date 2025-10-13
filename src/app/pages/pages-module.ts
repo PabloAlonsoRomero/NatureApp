@@ -8,9 +8,12 @@ import { NzTagModule } from 'ng-zorro-antd/tag';
 import { AdminLayout } from './admin-layout/admin-layout';
 import { RouterModule } from '@angular/router';
 import { ADMIN_ROUTES } from './pages.routes';
+import { PlaceComponent } from './place.component/place.component';
+import { PlaceService } from '../core/services/place.service';
 
 @NgModule({
   declarations: [
+    PlaceComponent,
     AdminLayout
   ],
   imports: [
@@ -23,9 +26,10 @@ import { ADMIN_ROUTES } from './pages.routes';
     NzTagModule
   ],
   providers: [
-
+    PlaceService
   ],
   exports: [
+    PlaceComponent,
     AdminLayout
   ]
 })

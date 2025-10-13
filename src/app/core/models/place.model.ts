@@ -3,19 +3,19 @@ import { Photo } from "./photo.model";
 import { Trail } from "./trail.model";
 
 export interface Place {
-  Id : number;
-  Name : string;
-  Description : string;
-  Category : string;
-  Latitude : number;
-  Longitude : number;
-  ElevationMeters : number;
-  Accesible : boolean;
-  EntryFee : number;
-  OpeningHours : string;
-  Trails : Trail[];
-  Photos : Photo[];
-  Amenities : Amenity[];
+  id : number;
+  name : string;
+  description : string;
+  category : string;
+  latitude : number;
+  longitude : number;
+  elevationMeters : number;
+  accesible : boolean;
+  entryFee : number;
+  openingHours : string;
+  trails : Trail[];
+  photos : Photo[];
+  amenities : Amenity[];
 }
 
 // Corresponde al modelo de PlaceDto del backend

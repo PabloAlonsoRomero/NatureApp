@@ -1,6 +1,6 @@
 export interface Amenity {
-  Id : number;
-  Name : string;
+  id : number;
+  name : string;
 }
 
 // Corresponde al modelo de AmenityDto del backend
