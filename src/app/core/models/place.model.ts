@@ -10,7 +10,7 @@ export interface Place {
   latitude : number;
   longitude : number;
   elevationMeters : number;
-  accesible : boolean;
+  accessible : boolean;
   entryFee : number;
   openingHours : string;
   trails : Trail[];

@@ -1,0 +1,22 @@
+<nz-table [nzData]="places">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Nombre</th>
+      <th>Descripcion</th>
+      <th>Categoria</th>
+      <th>Accesible</th>
+      <th>Costo</th>
+    </tr>
+  </thead>
+  <tbody> <!-- LOS PIPES TRANSFORMAN LA INFORMACION!!! -->
+    <tr *ngFor="let place of places">
+      <td>{{ place.id }}</td>
+      <td>{{ place.name }}</td>
+      <td>{{ place.description }}</td>
+      <td>{{ place.category }}</td>
+      <td>{{ place.accessible ? "Si" : "No"}}</td>
+      <td>{{ place.entryFee | currency}}</td>
+    </tr>
+  </tbody>
+</nz-table>
