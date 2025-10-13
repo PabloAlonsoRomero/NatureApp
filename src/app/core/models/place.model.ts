@@ -1,3 +1,7 @@
+import { Amenity } from "./amenity.model";
+import { Photo } from "./photo.model";
+import { Trail } from "./trail.model";
+
 export interface Place {
   Id : number;
   Name : string;
@@ -9,5 +13,9 @@ export interface Place {
   Accesible : boolean;
   EntryFee : number;
   OpeningHours : string;
-  Trails : 
+  Trails : Trail[];
+  Photos : Photo[];
+  Amenities : Amenity[];
 }
+
+// Corresponde al modelo de PlaceDto del backend
