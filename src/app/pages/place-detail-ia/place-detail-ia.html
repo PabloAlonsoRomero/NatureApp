@@ -1,8 +1,4 @@
-<div *ngIf="isLoading" class="spinner-container">
-  <div class="spinner"></div>
-</div>
-
-<div class="place-detail-card" *ngIf="!isLoading && place">
+<div class="place-detail-card" *ngIf="place">
   <h2>{{ place.name }}</h2>
   <span class="category-tag">{{ place.category }}</span>
   <p>{{ place.description }}</p>

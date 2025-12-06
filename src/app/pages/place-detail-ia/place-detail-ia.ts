@@ -12,7 +12,6 @@ import { environment } from '../../../environments/environment';
   standalone: false
 })
 export class PlaceDetailIa implements OnInit, AfterViewChecked {
-  isLoading = true;
   @ViewChild('miniMap', { static: false}) miniMapRef! : ElementRef;
   place : Place | null = null;
   resume : string = '';
@@ -34,12 +33,10 @@ export class PlaceDetailIa implements OnInit, AfterViewChecked {
         next: (res) => {
           this.resume = Array.isArray(res.resume) ? res.resume[0] : '';
           console.log("Place summary:", this.resume);
-          this.isLoading = false;
           setTimeout(() => this.initMap(), 0);
         },
         error: (err) => {
           console.error("Error fetching place summary:", err);
-          this.isLoading = false;
         }
       })
     });
