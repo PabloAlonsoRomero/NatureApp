@@ -1,19 +1,24 @@
-<div class="place-detail-card" *ngIf="place">
+<div *ngIf="isLoading" class="spinner-container">
+  <div class="spinner"></div>
+</div>
+
+<div class="place-detail-card" *ngIf="!isLoading && place">
   <h2>{{ place.name }}</h2>
   <span class="category-tag">{{ place.category }}</span>
   <p>{{ place.description }}</p>
+  <p>Resumen ia: {{ resume }}</p>
 
   <div class="info-g">
     <div><strong>Latitud:</strong> {{ place.latitude }}</div>
     <div><strong>Longitud</strong> {{ place.longitude }}</div>
     <div><strong>Altitud:</strong> {{ place.elevationMeters }}</div>
     <div><strong>Accesible:</strong> {{ place.accessible ? 'Si' : 'No' }}</div>
-    <div><strong>Cuota de entrada:</strong> {{ place.entryFee | currency:'MXN' }}</div>
+    <div><strong>Cuota de entrada:</strong> {{ place.entryFee | currency:'MXN'}}</div>
     <div><strong>Horario:</strong> {{ place.openingHours }}</div>
   </div>
 
   <!-- Mini mapa centrado en el lugar -->
-  <div id="mini-map" class="mini-map" #miniMap></div>
+  <div id="mini-map" class="mini-map" #miniMap *ngIf="place"></div>
 
   <!-- Galería de fotos -->
   <div class="gallery" *ngIf="place.photos?.length">

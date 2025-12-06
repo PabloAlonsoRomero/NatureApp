@@ -16,6 +16,7 @@ import { LugaresTablaComponent } from './lugares-tabla.component/lugares-tabla.c
 import { PlaceDetailComponent } from './place-detail.component/place-detail.component';
 import { TrailService } from '../core/services/trail.service';
 import { TrailsListComponent } from './trails-list.component/trails-list.component';
+import { PlaceDetailIa } from './place-detail-ia/place-detail-ia';
 const icons = Object.values(AllIcons);
 
 @NgModule({
@@ -24,7 +25,8 @@ const icons = Object.values(AllIcons);
     LugaresTablaComponent,
     PlaceDetailComponent,
     TrailsListComponent,
-    AdminLayout
+    AdminLayout,
+    PlaceDetailIa
   ],
   imports: [
     CommonModule,
@@ -44,7 +46,8 @@ const icons = Object.values(AllIcons);
     LugaresTablaComponent,
     PlaceDetailComponent,
     TrailsListComponent,
-    AdminLayout
+    AdminLayout,
+    PlaceDetailIa
   ]
 })
 export class PagesModule {}

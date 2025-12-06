@@ -24,4 +24,8 @@ export class PlaceService {
   getPlaceById(id : number) : Observable<Place> {
     return this.httpClient.get<Place>(`${environment.API_URL}/Places/${id}`)
   }
+
+  resumePlace(nombre : string ) : Observable<any> {
+    return this.httpClient.get<any>(`${environment.API_URL}/Places/resumePlace?nombre=${encodeURIComponent(nombre)}`)
+  }
 }
