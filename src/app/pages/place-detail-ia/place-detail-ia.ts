@@ -16,6 +16,7 @@ export class PlaceDetailIa implements OnInit, AfterViewChecked {
   place : Place | null = null;
   resume : string = '';
   map! : mapboxgl.Map;
+  isLoading = true;
   style = "mapbox://styles/mapbox/streets-v11";
   markers : mapboxgl.Marker[] = [];
   mapInitialized = false;
@@ -33,6 +34,7 @@ export class PlaceDetailIa implements OnInit, AfterViewChecked {
         next: (res) => {
           this.resume = Array.isArray(res.resume) ? res.resume[0] : '';
           console.log("Place summary:", this.resume);
+          this.isLoading = false;
           setTimeout(() => this.initMap(), 0);
         },
         error: (err) => {
